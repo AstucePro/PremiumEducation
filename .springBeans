@@ -9,6 +9,7 @@
 	<configs>
 		<config>src/main/webapp/WEB-INF/appconfig-security.xml</config>
 		<config>src/main/webapp/WEB-INF/appconfig-data.xml</config>
+		<config>src/main/webapp/WEB-INF/appconfig-mail.xml</config>
 	</configs>
 	<autoconfigs>
 		<config>src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml</config>
