@@ -1,7 +1,6 @@
 package com.astuce.education.service;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -35,13 +34,12 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public void saveStudent(StudentModel model) {
-		// TODO Auto-generated method stub
+		
         model.getUser().setPassword(bCryptPasswordEncoder.encode(model.getUser().getPassword()));
         List<Role> role= new ArrayList<Role>();
-        role.add(roleRepository.findOne((long) 3));
+        role.add(roleRepository.findByName("ROLE_STUDENT"));
         model.getUser().setRoles(new HashSet<Role>(role));
         
         Set<Role> r = model.getUser().getRoles();
@@ -54,7 +52,6 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public User findByUsername(String username) {
-		// TODO Auto-generated method stub
 		return userRepository.findByUsername(username);
 	}
 }

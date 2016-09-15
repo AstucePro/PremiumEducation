@@ -23,7 +23,6 @@ public class Situation {
 	
 	public Situation() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
     @Id

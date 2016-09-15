@@ -12,7 +12,6 @@ public class StudentModel {
 
 	public StudentModel() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public User getUser() {

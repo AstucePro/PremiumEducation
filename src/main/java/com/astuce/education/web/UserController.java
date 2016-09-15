@@ -30,7 +30,7 @@ public class UserController {
     public String studentRegistration(Model model) {
         model.addAttribute("userForm", new StudentModel());
 
-        return "registration/student";
+        return "registration/create_student";
     }
 
     @RequestMapping(value = "/registration/student", method = RequestMethod.POST)
@@ -38,7 +38,7 @@ public class UserController {
         userValidator.validate(userForm, bindingResult);
 
         if (bindingResult.hasErrors()) {
-            return "registration/student";
+            return "registration/create_student";
         }
 
         userService.saveStudent(userForm);
@@ -63,4 +63,5 @@ public class UserController {
     public String welcome(Model model) {
         return "welcome";
     }
+    
 }

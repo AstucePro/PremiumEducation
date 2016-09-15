@@ -25,7 +25,6 @@ public class Recruiter {
 	
 	public Recruiter() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
     @Id

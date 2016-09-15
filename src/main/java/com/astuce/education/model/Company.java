@@ -25,7 +25,6 @@ public class Company {
 	
 	public Company() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	@Id
