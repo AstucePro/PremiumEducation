@@ -9,7 +9,7 @@
         <security:intercept-url pattern="/" access="permitAll"/>
         <security:intercept-url pattern="/welcome" access="hasRole('ROLE_STUDENT')"/>
         <security:form-login login-page="/login" default-target-url="/welcome" authentication-failure-url="/login?error" username-parameter="username" password-parameter="password"/>
-        <security:logout logout-success-url="/login?logout" />
+        <security:logout logout-success-url="/" />
     </security:http>
 
     <security:authentication-manager alias="authenticationManager">
